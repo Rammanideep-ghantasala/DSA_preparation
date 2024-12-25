@@ -1,1 +1,115 @@
+/*in this you can find the basic mathematics needed and how handle the forloops it is mandatory to gothrough this file or playlist 
+Given a integer n return no of digits in the number
+.
+*/
+/*int countnofdigits(int n){
+    int count=0;
+   while(n>0){
+     
+     count++;
+     n=n/10;
+   }
+   return count;
+}*/
+/* REVERSE A NUMBER
+int revnum(int n){
+int rev=0;
+while(n>0){
+int lastdigit=n%10;
+rev=(rev*10)+lastdigit;
+n=n/10;
+}
+return rev;
+}
+*/
+/*
+int palindrome(int n){
+    int dup=n;
+    int rev=0;
+    while(n>0){
+       int lastdigit=n%10;
+       rev=(rev*10)+lastdigit;
+       n=n/10;
+    }
+    if(dup==rev){
+    return true;
+    }
+    else{
+    return -1;
+    }
+}
+int armstrong(int n){
+int dup=n;
+   int sum=0;
+   int lastdigit=0;
+   while(n>0){
+ lastdigit=n%10;
+ sum=sum+(lastdigit*lastdigit*lastdigit);
+   n=n/10;
 
+   }
+   if(sum==n){
+     return true;
+   }
+   else{
+    return -1;
+   }
+}
+int printdivisors(int n){
+          
+      for(int i=0;i<n;i++){ 
+         if(n%i==0){
+         //for this time complexcity is O(n)
+    // there is another method optimized than this look below this code.
+          cout<<i<<" ";
+         }
+        
+      }
+      
+}
+void printdivisors(int n){
+vector<int>v;
+        for(int i=0;i*i<=(n);i++){
+          if(n%i==0){
+          v.push_back(i);
+          if((n/i)!=i){
+          v.push_back(n/i);
+         }
+          }
+         
+        }
+        sort(v.begin(),v.end());
+        for(int num:v){
+          cout<<num<<" ";
+        }
+}
+        //primenumber check
+        int primenumbercheck(int n){
+        int count=0;
+        for(int i=1;i<=n;i++){
+         if(n%i==0){
+         count++;
+         if((n/i)!=i){
+           count++;
+         }
+         
+         }
+        }
+        if(count==2){
+        return true;
+        }
+}
+
+GCD/HCF=greates common factor or highest common factor
+for(int i=min(n1,n2);i>=1;i--){
+  if(n1%i==0&&n2%i==0){ 
+     gcd=i; 
+  }
+}
+Euclidean algorithm
+ GCD(n1,n2)=gcd(n1-n2,n2) if n1>n2
+ example:GCD(20,15)=gcd(5,15)
+//https://youtube.com/playlist?list=PLgUwDviBIf0oFON1SRGcMqMIhiZ4EXx_F&si=BoMG9u0yYwEw5YMm
+
+
+*/
